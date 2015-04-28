@@ -18,23 +18,23 @@ Using a JSON configuration file to map. This allows you to separate the implemen
 
 Here are the configuration options:
 
-{
-	"transport": "kafka", // Message broker to use
-	"brokerHost" : "localhost" // Host for the message broker
-	"brokerPort" : 9092 // Port for message broker
-	"host": "localhost", // Host pair for the wrapped application
-	"port": 8000, // Port for the wrapped application
-	"contentType": "" // (optional) Defaults to "application/json"
-	"paths": [
-        {
-            "event": "", // My suggestion is to use something like "{{path}}.{{method}}" for easy portability back to HTTP requests
-            "url": "", // URL of wrapped application to request
-            "method": "", // Method to make the request with
-            // The payload sent along with the event is transparently passed along with the configured content type.
-        },
-        // ... more path objects
-	],
-}
+	{
+		"transport": "kafka", // Message broker to use
+		"brokerHost" : "localhost" // Host for the message broker
+		"brokerPort" : 9092 // Port for message broker
+		"host": "localhost", // Host pair for the wrapped application
+		"port": 8000, // Port for the wrapped application
+		"contentType": "" // (optional) Defaults to "application/json"
+		"paths": [
+        	{
+        	    "event": "", // My suggestion is to use something like "{{path}}.{{method}}" for easy portability back to HTTP requests
+        	    "url": "", // URL of wrapped application to request
+	            "method": "", // Method to make the request with
+	            // The payload sent along with the event is transparently passed along with the configured content type.
+        	},
+        	// ... more path objects
+		],
+	}
 
 ## Messaging Systems Supported
 
